@@ -1,0 +1,81 @@
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #fff;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.hero {
+  height: 100vh;
+  background: url('canopy.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.overlay.clearbox {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  max-width: 700px;
+  width: 90%;
+  color: white;
+}
+
+.hero-line {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.subtitle {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+.delay0 {
+  animation-delay: 0.5s;
+}
+
+.delay1 {
+  animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Parallax white section */
+.parallax-follow {
+  background: white;
+  text-align: center;
+  padding: 6rem 2rem;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.more-text {
+  font-size: 2.4rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Static roots section */
+.roots-section {
+  height: 400px;
+  background-image: url('roots.jpg');
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
