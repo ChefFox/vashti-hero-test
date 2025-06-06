@@ -10,39 +10,16 @@
 <body>
   <header class="hero">
     <div class="overlay">
-      <div class="taglines">
-        <div class="line" id="line1">You’ve held it together</div>
-        <div class="line" id="line2">You don’t have to carry it alone anymore</div>
+      <div class="hero-line">
+        <span class="fade-in">You’ve held it together.</span><br>
+        <span class="fade-in delay">You don’t have to carry it alone anymore.</span>
       </div>
       <p class="subtitle">Vashti’s Heart Healing</p>
     </div>
   </header>
 
-  <script>
-    const taglines = [
-      ["You’ve held it together", "You don’t have to carry it alone anymore"],
-      ["Healing doesn’t always start with answers", "Sometimes it starts with being seen"],
-      ["When was the last time…", "…you felt like yourself?"]
-    ];
-    let i = 0;
-    const line1 = document.getElementById("line1");
-    const line2 = document.getElementById("line2");
-
-    function rotateTaglines() {
-      line1.style.opacity = 0;
-      line2.style.opacity = 0;
-      setTimeout(() => {
-        line1.textContent = taglines[i][0];
-        line2.textContent = taglines[i][1];
-        line1.style.opacity = 1;
-        setTimeout(() => {
-          line2.style.opacity = 1;
-        }, 1500);
-        i = (i + 1) % taglines.length;
-      }, 500);
-    }
-
-    setInterval(rotateTaglines, 6000);
-  </script>
+  <section class="follow-up">
+    <p>More to follow!</p>
+  </section>
 </body>
 </html>
