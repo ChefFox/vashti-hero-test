@@ -30,12 +30,15 @@ body {
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.5;
-  opacity: 0;
-  animation: fadeIn 2s ease forwards;
 }
 
-.hero-line span {
-  display: block;
+.subtitle {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.fade-in {
   opacity: 0;
   animation: fadeIn 2s ease forwards;
 }
@@ -45,11 +48,11 @@ body {
 }
 
 .delay1 {
-  animation-delay: 2.5s;
+  animation-delay: 2s;
 }
 
 .delay2 {
-  animation-delay: 5s;
+  animation-delay: 4.5s;
 }
 
 @keyframes fadeIn {
@@ -69,7 +72,7 @@ body {
 }
 
 .more-text {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #333;
   margin: 0;
 }
@@ -80,5 +83,5 @@ body {
   background-attachment: scroll;
   background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
