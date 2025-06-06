@@ -6,24 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vashti's Heart Healing</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
 </head>
 <body>
   <header class="hero">
     <div class="overlay clearbox">
       <div class="hero-line">
-        <span class="line1 fade-in delay0">You’ve held it together.</span><br>
-        <span class="line2 fade-in delay1">You don’t have to carry it alone anymore.</span>
+        <span class="fade-in delay0">You’ve held it together.</span><br>
+        <span class="fade-in delay1">You don’t have to carry it alone anymore.</span><br>
+        <span class="fade-in delay2">Welcome to Vashti’s Heart Healing</span>
       </div>
-      <p class="subtitle">Vashti’s Heart Healing</p>
     </div>
   </header>
 
-  <section class="follow-up parallax-follow">
+  <section class="follow-up rellax" data-rellax-speed="-3">
     <p class="more-text">More to follow!</p>
   </section>
 
   <section class="roots-section"></section>
 
-  <!-- version: parallax-strong-v1 -->
+  <script>
+    var rellax = new Rellax('.rellax');
+  </script>
+
+  <!-- version: v4 with Rellax.js -->
 </body>
 </html>
