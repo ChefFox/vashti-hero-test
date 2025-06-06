@@ -1,0 +1,93 @@
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #fff;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.hero {
+  height: 100vh;
+  background: url('canopy.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.overlay.clearbox {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  max-width: 700px;
+  width: 90%;
+  color: white;
+}
+
+.hero-line {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.subtitle {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+.delay0 {
+  animation-delay: 0.5s;
+}
+
+.delay1 {
+  animation-delay: 2s;
+}
+
+.delay2 {
+  animation-delay: 4.5s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.parallax-follow {
+  background: white;
+  text-align: center;
+  padding: 8rem 2rem;
+  position: relative;
+  will-change: transform;
+  transform-style: preserve-3d;
+  perspective: 1px;
+  background-attachment: scroll;
+  transition: transform 0.3s ease;
+}
+
+.more-text {
+  font-size: 3rem;
+  color: #333;
+  margin: 0;
+}
+
+.heart-tree-section {
+  background: url('Heart_on_tree.png') no-repeat center center/cover;
+  height: 70vh;
+  margin: 0;
+}
+
+.roots-section {
+  height: 80vh;
+  background-image: url('roots.jpg');
+  background-attachment: scroll;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
