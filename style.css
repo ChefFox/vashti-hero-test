@@ -2,59 +2,56 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background: #fdfdfd;
-  color: #333;
 }
 
 .hero {
+  background-image: url('canopy.jpg');
   background-size: cover;
   background-position: center;
+  height: 100vh;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 10rem 2rem;
   position: relative;
 }
 
-.hero-text {
-  background-color: rgba(0, 0, 0, 0.5);
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 2rem;
-  display: inline-block;
   border-radius: 1rem;
+  max-width: 90%;
 }
 
 .carousel-set {
   position: relative;
-  height: 4rem;
+  height: 5rem;
+  margin-bottom: 1rem;
 }
 
 .carousel-pair {
-  position: absolute;
-  width: 100%;
-  opacity: 0;
-  animation: rotateTaglines 18s linear infinite;
-  text-align: center;
-}
-
-.carousel-pair:nth-child(1) { animation-delay: 0s; }
-.carousel-pair:nth-child(2) { animation-delay: 6s; }
-.carousel-pair:nth-child(3) { animation-delay: 12s; }
-
-.line1, .line2 {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
   font-size: 1.8rem;
   font-weight: bold;
-  transition: opacity 1s;
+  animation: fadeInOut 6s ease-in-out infinite;
 }
 
-@keyframes rotateTaglines {
-  0%, 100% { opacity: 0; }
-  5%, 30% { opacity: 1; }
-  45%, 55% { opacity: 0; }
-  60%, 85% { opacity: 1; }
-  90% { opacity: 0; }
+.carousel-pair.active {
+  display: flex;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: #fff;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
 }

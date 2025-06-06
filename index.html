@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero" style="background-image: url('canopy.jpg');">
-    <div class="hero-text">
+  <header class="hero">
+    <div class="overlay">
       <div class="carousel-set">
-        <div class="carousel-pair">
+        <div class="carousel-pair active">
           <div class="line1">You’ve held it together</div>
           <div class="line2">You don’t have to carry it alone anymore</div>
         </div>
@@ -27,5 +27,14 @@
       <p class="subtitle">Vashti’s Heart Healing</p>
     </div>
   </header>
+  <script>
+    const pairs = document.querySelectorAll('.carousel-pair');
+    let index = 0;
+    setInterval(() => {
+      pairs[index].classList.remove('active');
+      index = (index + 1) % pairs.length;
+      pairs[index].classList.add('active');
+    }, 6000);
+  </script>
 </body>
 </html>
