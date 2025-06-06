@@ -27,14 +27,14 @@ body {
 }
 
 .hero-line {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.5;
 }
 
 .subtitle {
   margin-top: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: white;
 }
 
@@ -55,24 +55,21 @@ body {
   to { opacity: 1; }
 }
 
-/* Parallax white section */
 .parallax-follow {
   background: white;
   text-align: center;
-  padding: 6rem 2rem;
-  transform: translateZ(0);
+  padding: 8rem 2rem;
+  position: relative;
   will-change: transform;
+  transform-style: preserve-3d;
+  perspective: 1px;
+  background-attachment: scroll;
+  transition: transform 0.3s ease;
 }
 
-.more-text {
-  font-size: 2.4rem;
-  color: #333;
-  margin: 0;
-}
-
-/* Static roots section */
+/* Use JS to update parallax */
 .roots-section {
-  height: 400px;
+  height: 500px;
   background-image: url('roots.jpg');
   background-attachment: scroll;
   background-position: center;
