@@ -1,0 +1,84 @@
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #fff;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.hero {
+  height: 100vh;
+  background: url('canopy.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.overlay.clearbox {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  max-width: 700px;
+  width: 90%;
+  color: white;
+}
+
+.hero-line {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+.hero-line span {
+  display: block;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+.delay0 {
+  animation-delay: 0.5s;
+}
+
+.delay1 {
+  animation-delay: 2.5s;
+}
+
+.delay2 {
+  animation-delay: 5s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.parallax-follow {
+  background: white;
+  text-align: center;
+  padding: 8rem 2rem;
+  position: relative;
+  will-change: transform;
+  transform-style: preserve-3d;
+  perspective: 1px;
+  background-attachment: scroll;
+  transition: transform 0.3s ease;
+}
+
+.more-text {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.roots-section {
+  height: 600px;
+  background-image: url('roots.jpg');
+  background-attachment: scroll;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
