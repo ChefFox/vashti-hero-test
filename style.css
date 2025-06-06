@@ -5,53 +5,39 @@ body {
 }
 
 .hero {
-  background-image: url('canopy.jpg');
-  background-size: cover;
-  background-position: center;
   height: 100vh;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  background: url('canopy.jpg') no-repeat center center/cover;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   border-radius: 1rem;
-  max-width: 90%;
+  max-width: 700px;
+  width: 90%;
 }
 
-.carousel-set {
-  position: relative;
-  height: 5rem;
-  margin-bottom: 1rem;
-}
-
-.carousel-pair {
-  display: none;
-  flex-direction: column;
-  gap: 0.5rem;
-  font-size: 1.8rem;
-  font-weight: bold;
-  animation: fadeInOut 6s ease-in-out infinite;
-}
-
-.carousel-pair.active {
+.taglines {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.line {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  margin-top: 1rem;
-  color: #fff;
-}
-
-@keyframes fadeInOut {
-  0% { opacity: 0; }
-  10% { opacity: 1; }
-  80% { opacity: 1; }
-  100% { opacity: 0; }
+  color: white;
+  margin-top: 2rem;
 }

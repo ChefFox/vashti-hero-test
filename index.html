@@ -10,31 +10,39 @@
 <body>
   <header class="hero">
     <div class="overlay">
-      <div class="carousel-set">
-        <div class="carousel-pair active">
-          <div class="line1">You’ve held it together</div>
-          <div class="line2">You don’t have to carry it alone anymore</div>
-        </div>
-        <div class="carousel-pair">
-          <div class="line1">Healing doesn’t always start with answers</div>
-          <div class="line2">Sometimes it starts with being seen</div>
-        </div>
-        <div class="carousel-pair">
-          <div class="line1">When was the last time…</div>
-          <div class="line2">…you felt like yourself?</div>
-        </div>
+      <div class="taglines">
+        <div class="line" id="line1">You’ve held it together</div>
+        <div class="line" id="line2">You don’t have to carry it alone anymore</div>
       </div>
       <p class="subtitle">Vashti’s Heart Healing</p>
     </div>
   </header>
+
   <script>
-    const pairs = document.querySelectorAll('.carousel-pair');
-    let index = 0;
-    setInterval(() => {
-      pairs[index].classList.remove('active');
-      index = (index + 1) % pairs.length;
-      pairs[index].classList.add('active');
-    }, 6000);
+    const taglines = [
+      ["You’ve held it together", "You don’t have to carry it alone anymore"],
+      ["Healing doesn’t always start with answers", "Sometimes it starts with being seen"],
+      ["When was the last time…", "…you felt like yourself?"]
+    ];
+    let i = 0;
+    const line1 = document.getElementById("line1");
+    const line2 = document.getElementById("line2");
+
+    function rotateTaglines() {
+      line1.style.opacity = 0;
+      line2.style.opacity = 0;
+      setTimeout(() => {
+        line1.textContent = taglines[i][0];
+        line2.textContent = taglines[i][1];
+        line1.style.opacity = 1;
+        setTimeout(() => {
+          line2.style.opacity = 1;
+        }, 1500);
+        i = (i + 1) % taglines.length;
+      }, 500);
+    }
+
+    setInterval(rotateTaglines, 6000);
   </script>
 </body>
 </html>
